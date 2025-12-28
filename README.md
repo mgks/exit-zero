@@ -1,21 +1,21 @@
-# exit-zero
+# force-exit-zero
 
 Force a command to exit with code 0 (success).
 
 **The Problem:** Your CI fails because a linter found a warning, or a non-critical script returned exit code 1. You try adding `|| true` but it doesn't work consistently across Windows/Linux shells.
 
-**The Solution:** `exit-zero` runs your command, streams the output (colors preserved), and **always** reports success to the OS.
+**The Solution:** `force-exit-zero` runs your command, streams the output (colors preserved), and **always** reports success to the OS.
 
-<a href="https://www.npmjs.com/package/exit-zero"><img src="https://img.shields.io/npm/v/exit-zero.svg?style=flat-square&color=007acc" alt="npm version"></a>
-<a href="https://bundlephobia.com/package/exit-zero"><img src="https://img.shields.io/bundlephobia/minzip/exit-zero?style=flat-square" alt="size"></a>
-<a href="https://www.npmjs.com/package/exit-zero"><img src="https://img.shields.io/npm/dt/exit-zero.svg?style=flat-square&color=success" alt="npm downloads"></a>
-<a href="https://github.com/mgks/exit-zero/blob/main/LICENSE"><img src="https://img.shields.io/github/license/mgks/exit-zero.svg?style=flat-square&color=blue" alt="license"></a>
-<a href="https://github.com/mgks/exit-zero/stargazers"><img src="https://img.shields.io/github/stars/mgks/exit-zero?style=flat-square&logo=github" alt="stars"></a>
+<a href="https://www.npmjs.com/package/force-exit-zero"><img src="https://img.shields.io/npm/v/force-exit-zero.svg?style=flat-square&color=007acc" alt="npm version"></a>
+<a href="https://bundlephobia.com/package/force-exit-zero"><img src="https://img.shields.io/bundlephobia/minzip/force-exit-zero?style=flat-square" alt="size"></a>
+<a href="https://www.npmjs.com/package/force-exit-zero"><img src="https://img.shields.io/npm/dt/force-exit-zero.svg?style=flat-square&color=success" alt="npm downloads"></a>
+<a href="https://github.com/mgks/force-exit-zero/blob/main/LICENSE"><img src="https://img.shields.io/github/license/mgks/force-exit-zero.svg?style=flat-square&color=blue" alt="license"></a>
+<a href="https://github.com/mgks/force-exit-zero/stargazers"><img src="https://img.shields.io/github/stars/mgks/force-exit-zero?style=flat-square&logo=github" alt="stars"></a>
 
 ## Install
 
 ```bash
-npm install exit-zero
+npm install force-exit-zero
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ npm install exit-zero
 {
   "scripts": {
     "lint": "eslint .",
-    "lint:ci": "exit-zero npm run lint"
+    "lint:ci": "force-exit-zero npm run lint"
   }
 }
 ```
@@ -35,13 +35,13 @@ npm install exit-zero
 
 ```yaml
 steps:
-  - run: npx exit-zero npm run test:flaky
+  - run: npx force-exit-zero npm run test:flaky
 ```
 
 ### CLI
 
 ```bash
-$ exit-zero ls --unknown-flag
+$ force-exit-zero ls --unknown-flag
 ls: unrecognized option '--unknown-flag'
 # (The command failed, but the process exited with 0)
 ```
@@ -49,7 +49,7 @@ ls: unrecognized option '--unknown-flag'
 ## Why not `|| true`?
 *   `|| true` doesn't work in standard Windows cmd.exe.
 *   `|| true` can be confusing in complex `npm run` chains.
-*   `exit-zero` is explicit: you are intentionally suppressing the failure.
+*   `force-exit-zero` is explicit: you are intentionally suppressing the failure.
 
 ## License
 
