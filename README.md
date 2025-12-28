@@ -8,9 +8,9 @@ Force a command to exit with code 0 (success).
 
 <a href="https://www.npmjs.com/package/force-exit-zero"><img src="https://img.shields.io/npm/v/force-exit-zero.svg?style=flat-square&color=007acc" alt="npm version"></a>
 <a href="https://bundlephobia.com/package/force-exit-zero"><img src="https://img.shields.io/bundlephobia/minzip/force-exit-zero?style=flat-square" alt="size"></a>
-<a href="https://www.npmjs.com/package/force-exit-zero"><img src="https://img.shields.io/npm/dt/force-exit-zero.svg?style=flat-square&color=success" alt="npm downloads"></a>
-<a href="https://github.com/mgks/force-exit-zero/blob/main/LICENSE"><img src="https://img.shields.io/github/license/mgks/force-exit-zero.svg?style=flat-square&color=blue" alt="license"></a>
-<a href="https://github.com/mgks/force-exit-zero/stargazers"><img src="https://img.shields.io/github/stars/mgks/force-exit-zero?style=flat-square&logo=github" alt="stars"></a>
+<a href="https://www.npmjs.com/package/force-exit-zero"><img src="https://img.shields.io/npm/dt/force-exit-zero.svg?style=flat-square&color=success&v2" alt="npm downloads"></a>
+<a href="https://github.com/mgks/force-exit-zero/blob/main/LICENSE"><img src="https://img.shields.io/github/license/mgks/force-exit-zero.svg?style=flat-square&color=blue&v2" alt="license"></a>
+<a href="https://github.com/mgks/force-exit-zero/stargazers"><img src="https://img.shields.io/github/stars/mgks/force-exit-zero?style=flat-square&logo=github&v2" alt="stars"></a>
 
 ## Install
 
